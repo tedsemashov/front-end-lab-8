@@ -1,0 +1,147 @@
+@mixin bordered {
+    border: 2px solid $borderedColor;
+    padding: 2px;
+}
+
+@mixin brief {
+    background-color: $bodyColor;
+    width: $bWidth;
+    padding: $bPadding;
+    margin: $bMargin;
+    height: $bHeight;
+    float: $bFloat;
+    color: $textColor;
+}
+
+body {
+    background-color: $bodyColor;
+}
+
+#content {
+    width: 960px;
+    background-color: $bodyContentColor;
+    margin: 0 auto;
+    padding: 20px;
+    color: $textColor;
+}
+
+h1 {
+    text-align: center;
+    color: $hColor;
+}
+
+h2 {
+    color: $hColor;
+}
+
+img {
+    @include bordered;
+}
+
+.brief {
+    @include brief;
+}
+
+.img-right {
+    float: right;
+    margin-left: 15px;
+}
+
+.img-left {
+    float: left;
+    margin: 4px 19px 10px 0;
+}
+
+a {
+    color: $linkColor;
+}
+
+caption {
+    text-align: right;
+}
+
+th {
+    background-color: $tableThColor;
+    height: 40px;
+    text-transform: uppercase;
+    font-weight: normal;
+    text-align: left;
+    padding-left: 15px;
+    border-right: 1px solid white;
+}
+
+th:last-child{
+border-right: none;
+}
+
+caption{
+  color:$captionColor;
+}
+
+tr{
+  background: $trTableColor;
+}
+
+td {
+    padding: 10px 10px 15px;
+    border-bottom: 1px solid $tdBorderColor;
+}
+
+table {
+    border-collapse: collapse;
+    margin-bottom: 50px;
+}
+
+input {
+    display: inline-block;
+    width: 100%;
+    margin: 5px 0 10px 0;
+    height: 20px;
+}
+
+form{
+    label{
+        text-transform: uppercase;
+        color:$labelText;
+    }
+}
+
+::-webkit-input-placeholder {
+  padding-left: 5px;
+}
+
+#firstName {
+    width: 49%;
+    float: left;
+}
+
+#lastName {
+    width: 49%;
+    float: right;
+}
+
+#writeYourReview{
+    width: 100%;
+    resize: vertical;
+}
+
+button{
+    width: 200px;
+    height: 40px;
+    cursor: pointer;
+    background: 0 0;
+    color: $buttonTextColor;
+    border: 1px solid $buttonBorderColor;
+    font-size: 20px;
+    text-transform: uppercase;
+    margin: 20px 0 20px 0;
+      &:hover{
+        color:lighten($buttonTextColor,20%);
+        color:lighten($buttonBorderColor,20%);
+        margin: 21px 0 20px 1px;
+      }
+}
+
+textarea{
+  margin-top: 5px;
+}
